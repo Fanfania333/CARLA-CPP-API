@@ -1,0 +1,12 @@
+# This repository is a redistribution of third-party code. Mark the vendored
+# dependency trees so GitHub's language statistics and diffs reflect that.
+Linux/libcarla-install/include/system/** linguist-vendored
+Linux/libcarla-install/include/carla/**  linguist-vendored
+Linux/libcarla-install/include/pugixml/** linguist-vendored
+Linux/libcarla-install/include/moodycamel/** linguist-vendored
+Linux/libcarla-install/include/odrSpiral/** linguist-vendored
+
+# Prebuilt artifacts are binary.
+*.a  binary
+*.so binary
+*.so.* binary

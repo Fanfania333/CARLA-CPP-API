@@ -1,0 +1,171 @@
+===============================================================================
+NOTICE — CarlaCppLibrary
+Third-party components, attributions, and required notices
+===============================================================================
+
+This repository redistributes the CARLA 0.9.16 C++ client library and the
+dependencies it is built against. It contains no original code. Every file under
+Linux/ is redistributed as produced by the upstream CARLA build.
+
+The license of the primary work (CARLA, MIT) is in LICENSE. The full license text
+of every component is in THIRD_PARTY_LICENSES/. This file maps components to
+licenses, records the attributions that the Apache-2.0 and BSD-2 components
+require, and states which binaries correspond to which component.
+
+
+-------------------------------------------------------------------------------
+1. COMPONENT / LICENSE MAP
+-------------------------------------------------------------------------------
+
+CARLA (LibCarla C++ client) — version 0.9.16
+  Path:     Linux/libcarla-install/include/carla/**
+  License:  MIT
+  Text:     THIRD_PARTY_LICENSES/CARLA-MIT.txt
+
+Boost C++ Libraries — version 1.84.0
+  Path:     Linux/libcarla-install/include/system/boost/**
+  License:  BSL-1.0
+  Text:     THIRD_PARTY_LICENSES/Boost-1.0.txt
+
+rpclib — version 2.2.1
+  Path:     Linux/libcarla-install/include/system/rpc/** (rpclib's own headers)
+  License:  MIT
+  Text:     THIRD_PARTY_LICENSES/rpclib-MIT.txt
+
+msgpack-c (MessagePack for C++) — bundled inside rpclib
+  Path:     Linux/libcarla-install/include/system/rpc/msgpack.hpp
+  License:  Apache-2.0
+  Text:     THIRD_PARTY_LICENSES/msgpack-Apache-2.0.txt
+
+  Path:     Linux/libcarla-install/include/system/rpc/msgpack/**
+  License:  BSL-1.0
+  Text:     THIRD_PARTY_LICENSES/Boost-1.0.txt
+
+optional-lite — bundled inside rpclib
+  Path:     Linux/libcarla-install/include/system/rpc/nonstd/optional.hpp
+  License:  MIT
+  Text:     THIRD_PARTY_LICENSES/optional-lite-MIT.txt
+
+Recast & Detour (Recast Navigation) — version 1.6.0
+  Path:     Linux/libcarla-install/include/system/recast/**
+  License:  Zlib
+  Text:     THIRD_PARTY_LICENSES/Recast-Detour-zlib.txt
+
+libpng — version 1.6.37
+  Path:     Linux/libcarla-install/include/system/libpng16/**
+  License:  Libpng (PNG Reference Library License version 2)
+  Text:     THIRD_PARTY_LICENSES/libpng.txt
+
+pugixml — version 1.9
+  Path:     Linux/libcarla-install/include/pugixml/**
+  License:  MIT
+  Text:     THIRD_PARTY_LICENSES/pugixml-MIT.txt
+
+odrSpiral
+  Path:     Linux/libcarla-install/include/odrSpiral/**
+  License:  Apache-2.0
+  Text:     THIRD_PARTY_LICENSES/odrSpiral-Apache-2.0.txt
+
+moodycamel::ConcurrentQueue
+  Path:     Linux/libcarla-install/include/moodycamel/ConcurrentQueue.h
+  License:  BSD-2-Clause
+  Text:     THIRD_PARTY_LICENSES/moodycamel-BSD-2.txt
+
+
+-------------------------------------------------------------------------------
+2. APACHE LICENSE 2.0 ATTRIBUTIONS
+-------------------------------------------------------------------------------
+
+The following components are, in whole or in part, licensed under the Apache
+License, Version 2.0. Their attribution notices are reproduced here as required
+by section 4(d) of that license.
+
+msgpack-c (MessagePack for C++)
+    Copyright (C) 2008-2009 FURUHASHI Sadayuki
+  Applies to: include/system/rpc/msgpack.hpp
+  (The remainder of the bundled msgpack-c, include/system/rpc/msgpack/**, is
+  distributed under the Boost Software License 1.0 and carries
+  "Copyright (C) 2008-2013 FURUHASHI Sadayuki and Takatoshi Kondo".)
+
+odrSpiral
+    Copyright 2010 VIRES Simulationstechnologie GmbH
+  Applies to: include/odrSpiral/odrSpiral.h, include/odrSpiral/odrSpiral.cpp
+  The methods were realized using the CEPHES library
+  (http://www.netlib.org/cephes/).
+
+Ryu — dual-licensed Apache-2.0 OR BSL-1.0
+    Copyright 2018 Ulf Adams
+  Applies to: include/system/boost/json/detail/ryu/**
+  Upstream marks this as "a derivative work". This distribution relies on the
+  Boost Software License option; the Apache-2.0 notices remain intact in the
+  sources.
+
+Proposed SG14 status_code (Outcome) — dual-licensed Apache-2.0 OR BSL-1.0
+    (C) 2018 - 2023 Niall Douglas <http://www.nedproductions.biz/>
+  Applies to: include/system/boost/outcome/experimental/status-code/**
+  This distribution relies on the Boost Software License option; the Apache-2.0
+  notices remain intact in the sources.
+
+
+-------------------------------------------------------------------------------
+3. STATEMENT OF MODIFICATIONS
+-------------------------------------------------------------------------------
+
+This repository makes NO modifications to any bundled source or binary. Files are
+byte-for-byte as produced by the upstream CARLA 0.9.16 build; even the upstream
+filename typo include/carla/client/FIleTransfer.cpp is preserved. No file has
+been reformatted, re-headered, or patched here.
+
+One bundled file was modified upstream, by CARLA rather than by this repository,
+and says so in its own header:
+
+  include/moodycamel/ConcurrentQueue.h
+    "Notice: This file has been slightly adapted for its use by CARLA."
+
+That notice is retained in the file, as BSD-2-Clause requires.
+
+
+-------------------------------------------------------------------------------
+4. PREBUILT BINARIES
+-------------------------------------------------------------------------------
+
+The binaries in Linux/libcarla-install/lib/ are prebuilt for Linux x86-64 and
+map to components as follows:
+
+  libcarla_client.a                              CARLA (MIT)
+  librpc.a                                       rpclib (MIT) + msgpack-c
+  libboost_atomic.a, .so.1.84.0                  Boost (BSL-1.0)
+  libboost_filesystem.a, .so.1.84.0              Boost (BSL-1.0)
+  libboost_program_options.a, .so.1.84.0         Boost (BSL-1.0)
+  libboost_python38.a, .so.1.84.0                Boost (BSL-1.0)
+  libboost_system.a, .so.1.84.0                  Boost (BSL-1.0)
+  libRecast.a                                    Recast (Zlib)
+  libDetour.a                                    Detour (Zlib)
+  libDetourCrowd.a                               Detour (Zlib)
+  libDetourTileCache.a                           Detour (Zlib)
+  libDebugUtils.a                                Recast Navigation (Zlib)
+  libpng16.a, .so.16.37.0, .la                   libpng (Libpng)
+
+IMPORTANT: libcarla_client.a is a static archive that statically embeds compiled
+third-party object code, not only CARLA's own. Symbol inspection of the archive
+finds code from Boost, rpclib, pugixml, odrSpiral and moodycamel::ConcurrentQueue.
+Anyone linking against it is redistributing those components too, and the notices
+in this file and in THIRD_PARTY_LICENSES/ travel with them.
+
+libpng16.la records "dependency_libs=' -lz -lm'": zlib is NOT bundled here and is
+resolved from the system at link time. Its license is therefore out of scope for
+this repository.
+
+
+-------------------------------------------------------------------------------
+5. TRADEMARKS
+-------------------------------------------------------------------------------
+
+"CARLA" is used in this repository solely to identify the upstream software being
+redistributed. This distribution is unofficial: it is not affiliated with,
+endorsed by, or released by the CARLA project, the Computer Vision Center (CVC),
+or the Universitat Autonoma de Barcelona (UAB). The official project is at
+https://github.com/carla-simulator/carla.
+
+As noted in THIRD_PARTY_LICENSES/libpng.txt, the libpng Copyright owners claim
+common-law trademark protection in the name "libpng".
