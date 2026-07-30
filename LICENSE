@@ -19,27 +19,3 @@ FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
--------------------------------------------------------------------------------
-ABOUT THIS REPOSITORY
--------------------------------------------------------------------------------
-
-This repository is an unmodified redistribution of the CARLA 0.9.16 C++ client
-library (LibCarla) and the third-party dependencies it is built against. It
-contains no original code: every file under Linux/ was produced by the upstream
-CARLA build and is redistributed verbatim.
-
-The MIT license above is the license of that primary work, CARLA, and applies to
-the contents of Linux/libcarla-install/include/carla/ and to the compiled
-library Linux/libcarla-install/lib/libcarla_client.a.
-
-Other bundled components are licensed separately, under other permissive terms
-(Boost Software License 1.0, Apache License 2.0, the zlib license, the libpng
-license, and 2-clause BSD). Their full license texts are reproduced in
-THIRD_PARTY_LICENSES/, and NOTICE maps each component to its license, lists the
-required attributions, and records which binaries in Linux/libcarla-install/lib/
-correspond to which component.
-
-This distribution is unofficial and is not affiliated with, endorsed by, or
-released by the CARLA project or by CVC/UAB. See README.md.
